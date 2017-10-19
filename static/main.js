@@ -9,6 +9,11 @@ var x = "#0C0C0C",
 
 $(document).ready(function(){
     $("#slidecontainer").slider();
+    var startPos = $("#slidecontainer").slider("value");
+
+    $("#slidecontainer").on("slidestop", function(event, ui) {
+            y = ui.value;
+	});		
 
     $('.redbutton').click(function() {
 	    x = "#ff0000";

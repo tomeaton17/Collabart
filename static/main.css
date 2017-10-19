@@ -28,3 +28,7 @@
 #myRange {
     display: inline-block;
 }
+
+#slidecontainer {
+    width: 10em;
+}
