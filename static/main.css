@@ -1,0 +1,30 @@
+.colors div{
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+}
+
+.redbutton {
+    background-color: red;
+}
+
+.bluebutton {
+    background-color: blue;
+}
+
+.greenbutton {
+    background-color: green;
+}
+
+.blackbutton {
+    background-color: black;
+}
+
+#can {
+    border-style: solid;
+    border-width: 2px;
+}
+
+#myRange {
+    display: inline-block;
+}
