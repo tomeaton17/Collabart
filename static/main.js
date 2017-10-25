@@ -8,7 +8,10 @@ var x = "#0C0C0C",
     y = 20;
 
 $(document).ready(function(){
-    $("#slidecontainer").slider();
+    $("#slidecontainer").slider({
+    	min: 1,
+	max: 40
+    });
     var startPos = $("#slidecontainer").slider("value");
 
     $("#slidecontainer").on("slidestop", function(event, ui) {
