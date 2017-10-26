@@ -17,7 +17,6 @@ $(document).ready(function(){
 
     $("#slidecontainer").on("slidestop", function(event, ui) {
             y = ui.value;
-	    console.log(ui.value);
 	});		
 
     $('.redbutton').click(function() {
@@ -35,6 +34,24 @@ $(document).ready(function(){
     $('.eraser').click(function() {
 	    x = "#ffffff";
     });
+
+    $('.submit').click(function() {
+	var png = canvas.toDataURL();
+    	$.ajax({
+	    url: '/ajax',
+	    data: JSON.stringify({ base64: png}),
+	    type: 'POST',
+	    dataType: 'json',
+	    contentType: 'application/json',
+	    success: function(response) {
+		console.log('Success');
+            },
+            error: function(error) {
+                console.log(error);
+            }
+	});
+    });
+
 
 
     canvas = document.getElementById('can');
