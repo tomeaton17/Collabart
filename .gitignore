@@ -102,3 +102,6 @@ ENV/
 
 # direnv rc
 .envrc
+
+# saved images
+*.png
