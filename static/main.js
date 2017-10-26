@@ -5,17 +5,19 @@ var canvas, flag = false,
     prevY = 0,
     dot_flag = false;
 var x = "#0C0C0C",
-    y = 20;
+    y = 10;
 
-$(document).ready(function(){
+$(document).ready(function(){ 
     $("#slidecontainer").slider({
     	min: 1,
-	max: 40
+	max: 40,
+	value: 10
     });
     var startPos = $("#slidecontainer").slider("value");
 
     $("#slidecontainer").on("slidestop", function(event, ui) {
             y = ui.value;
+	    console.log(ui.value);
 	});		
 
     $('.redbutton').click(function() {
@@ -33,10 +35,14 @@ $(document).ready(function(){
     $('.eraser').click(function() {
 	    x = "#ffffff";
     });
+
+
     canvas = document.getElementById('can');
     ctx = canvas.getContext("2d");
     w = canvas.width;
     h = canvas.height;
+
+    $(".clear").click(function(){ctx.clearRect(0, 0, canvas.width, canvas.height);});
 
     canvas.addEventListener("mousemove", function (e) {
         findxy('move', e)

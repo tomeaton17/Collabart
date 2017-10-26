@@ -1,28 +1,27 @@
 <html>
-    <head>
-        <title>Collabart!</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-        <link rel="stylesheet" type="text/css"
-        href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+	<head>
+		<title>Collabart!</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+		<link rel="stylesheet" type="text/css"
+		href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 		<script src="{{ url_for('static', filename='main.js') }}"></script>
     </head>
     <body>
-        <h1>Collabart!</h1>
-        <p>This is a {{ test }}. Canvas goes below here</p>
-		<div class="colors"> 
-            <div class="redbutton"></div>
-            <div class="bluebutton"></div>
-            <div class="greenbutton"></div> 
-            <div class="blackbutton"></div>
-            <div class="eraser"><img src="{{ url_for('static',
-                filename='pdf-eraser.jpg') }}" alt="Eraser"></div>
-            <div id="slidecontainer">
-            </div>
-		</div><br>
-        <canvas id="can" width="200" height="200">
-			<p>Your browser doesn't support canvas. Get with the times man!</p>
-		</canvas>
+			<h1>Collabart!</h1>
+			<div class="colors"> 
+				<div class="redbutton"></div>
+				<div class="bluebutton"></div>
+				<div class="greenbutton"></div> 
+				<div class="blackbutton"></div>
+				<div class="eraser"><img src="{{ url_for('static',
+									filename='pdf-eraser.jpg') }}" alt="Eraser"></div>
+				<div id="slidecontainer"></div>
+				<div class="clear">Clear</div>
+			</div><br>
+			<canvas id="can" width="200" height="200">
+				<p>Your browser doesn't support canvas. Get with the times man!</p>
+			</canvas>
     </body>
 </html>
