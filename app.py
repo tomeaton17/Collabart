@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, json
-import base64
+import base64, sqlite3
 app = Flask(__name__)
 
 @app.route('/')
