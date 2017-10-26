@@ -28,6 +28,18 @@ class Painting(db.Model):
     def __repr__(self):
         return '<Painting %r>' % self.name
 
+class Tile(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    url = db.Column(db.String(100), nullable=False)
+    painting_id = db.Column(db.Integer, db.ForeignKey('painting.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user = db.relationship('User', backref=db.backref('tiles', lazy=True))
+    painting = db.relationship('Painting', backref=db.backref('tiles',
+                                                              lazy=True))
+
+    def __repr__(self):
+        return '<Tile %r>' % self.id
+
 @app.route('/')
 def index():
     return render_template('index.html', test='test')
