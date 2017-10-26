@@ -36,9 +36,10 @@ $(document).ready(function(){
     });
 
     $('.submit').click(function() {
+	var png = canvas.toDataURL();
     	$.ajax({
 	    url: '/ajax',
-	    data: JSON.stringify({ test: 'test'}),
+	    data: JSON.stringify({ base64: png}),
 	    type: 'POST',
 	    dataType: 'json',
 	    contentType: 'application/json',
