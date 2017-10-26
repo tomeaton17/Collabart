@@ -36,6 +36,23 @@ $(document).ready(function(){
 	    x = "#ffffff";
     });
 
+    $('.submit').click(function() {
+    	$.ajax({
+	    url: '/ajax',
+	    data: JSON.stringify({ test: 'test'}),
+	    type: 'POST',
+	    dataType: 'json',
+	    contentType: 'application/json',
+	    success: function(response) {
+		console.log('Success');
+            },
+            error: function(error) {
+                console.log(error);
+            }
+	});
+    });
+
+
 
     canvas = document.getElementById('can');
     ctx = canvas.getContext("2d");

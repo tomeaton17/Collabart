@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, json
 app = Flask(__name__)
 
 @app.route('/')
@@ -7,9 +7,10 @@ def index():
 
 @app.route('/ajax', methods=['POST'])
 def ajax():
-    data = request.args
+    data = request.get_json()
     print(data)
-    return data
+    return json.dumps({'success':True}), 200,
+    {'ContentType':'application/json'}
 
 if __name__ == '__main__':
     app.run(debug='True')
