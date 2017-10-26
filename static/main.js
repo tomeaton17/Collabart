@@ -17,7 +17,6 @@ $(document).ready(function(){
 
     $("#slidecontainer").on("slidestop", function(event, ui) {
             y = ui.value;
-	    console.log(ui.value);
 	});		
 
     $('.redbutton').click(function() {
