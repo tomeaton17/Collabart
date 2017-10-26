@@ -1,0 +1,58 @@
+.colors {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.colors div {
+    margin: 0.1em;
+}
+
+.redbutton {
+    background-color: red;
+    width: 3em;
+    height: 3em;
+}
+
+.bluebutton {
+    background-color: blue;
+    width: 3em;
+    height: 3em;
+}
+
+.greenbutton {
+    background-color: green;
+    width: 3em;
+    height: 3em;
+}
+
+.blackbutton {
+    background-color: black;
+    width: 3em;
+    height: 3em;
+}
+
+#can {
+    border-style: solid;
+    border-width: 2px;
+}
+
+#myRange {
+    display: inline-block;
+}
+
+#slidecontainer {
+    width: 10em;
+}
+
+.clear {
+    height: 3em;
+    line-height: 3em;
+    width: 4em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    text-align: center;
+    vertical-align: middle;
+}
